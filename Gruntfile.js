@@ -14,13 +14,16 @@ module.exports = function(grunt) {
       options: {                       // Target options
         style: 'compressed'
       },
-      files: {                         // Dictionary of files
-        'main-child.css': 'main-child.scss',      // 'destination': 'source'
-        'mobile-child.css': 'mobile-child.scss'
-      }
+      files: [{
+          expand:true,
+          cwd:'stylesheets/sass/',
+          src:['*.scss'],
+          dest:'stylesheets/css',
+          ext:'.css'                         // Dictionary of files
+      }]
     }
   },
-  concat: {
+  /*concat: {
     options: {
       separator: ' ',
     },
@@ -28,11 +31,7 @@ module.exports = function(grunt) {
       src: ['main-child.css', 'mobile-child.css'],
       dest: 'master-child.css',
     },
-    notMiny: {
-      src:['js/jquery-1.7.1.js','js/jquery-ui-1.10.4.custom.js','js/jquery.iosslider.js','js/jquery.isotope.min.js','js/jquery-css-transform.js','js/jquery-rotate.js','js/browserdetect.js','js/mainactions.js','js/min/gsapi.min.js','js/blurobjs.js','library/scripts/vallenato.js','js/soilsextension_custom.js'],
-      dest:'js/min/master.notMiny.js',
-    },
-  },
+  },*/
   watch: {
 	  scripts: {
 	    files: ['js/*.js'],
@@ -43,7 +42,7 @@ module.exports = function(grunt) {
 	  },
 	  css: {
 	    files: '**/*.scss',
-	    tasks: ['sass','concat'],
+	    tasks: ['sass'],
 		options: {
 	      livereload: true,
 	    },
