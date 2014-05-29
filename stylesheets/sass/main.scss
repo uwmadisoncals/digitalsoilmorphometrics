@@ -1,0 +1,39 @@
+//custom image background on the header
+
+
+div.wrapper header#branding{
+	background: url('../../kiwi.svg');
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	background-position:85% 30%;
+	background-size:180px auto;
+	transform: rotate( .0001deg );
+}
+
+/*
+html body.home div.wrapper header#branding div#svg_IUSS {
+    height: 135px;
+    width: 180px;
+}
+*/
+
+/*
+Styling the heading
+ */
+
+#site-title {
+	padding-bottom: 0.5em;
+	a {
+	font-size:1.4em;
+	}
+
+}
+
+#site-description{
+	font-size:2em;
+	font-weight: 600;
+}
+
+a.readmore {
+	display:none;
+}
