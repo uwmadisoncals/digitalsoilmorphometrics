@@ -41,3 +41,45 @@ Remove the 'read more ' button
 a.readmore {
 	display:none;
 }
+
+
+//RESPONSIVE Breakpoints
+
+//For screens, everything less than 429px
+@media only screen and (max-width : 429px) {
+		div.wrapper header#branding{
+	background:none;
+	}
+}
+
+//For screens, everything BETWEEN 430 AND 767
+@media only screen and (min-width :430px) and (max-width :767px) {
+	div.wrapper header#branding{
+	background:none;
+}
+}
+
+//For screens, everything BETWEEN 768 AND 1078
+@media only screen and (min-width : 768px) and (max-width : 1078px) {
+	
+	.hgroup-right{
+		margin-top: 0;
+	}
+	#site-title a {
+		//word-spacing: 1000em;
+		line-height: 1em;
+		padding-bottom:.4em;
+	}
+	#site-logo {
+		margin-top:32px;
+	}
+
+	div.wrapper header#branding{
+	background-position:85% 45%;
+	background-size:180px auto;
+	}
+
+	body.home div.wrapper header#branding div.container {
+		margin-bottom: 60px;
+	}
+} 
