@@ -31,10 +31,20 @@
 </div><!-- #container -->
 
 <?php
-	/** 
-	 * attitude_after_main_container hook
-	 */
-	do_action( 'attitude_after_main_container' );
+//############################################
+	//#############    FIREPHP  ##################
+ 	
+
+	//$firephp = FirePHP::getInstance(true);
+	 
+	//$var_content = $content;
+	
+	//$firephp->log($var_content,'$var_content');
+
+	
+	
+	//############################################
+	//############################################
 ?>
 
 <?php get_footer(); ?>
